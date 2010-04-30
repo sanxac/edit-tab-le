@@ -1,0 +1,24 @@
+<h1>Meet the band</h1>
+<% if logged_in? %><%= link_to 'New', new_bio_path, {:class => 'new'} %> <% end %>
+
+<% for bio in @bios %>
+
+<% pair = cycle("even","odd")%>
+
+<% if logged_in? %>
+<ul class="adminLinks">
+    <li><%= link_to 'Edit', edit_bio_path(bio), {:class => pair} %></li>
+    <li><%= link_to 'Delete', bio, :confirm => 'Are you sure?', :method => :delete, :class => pair %></li>
+</ul>
+<% end %>
+<div class="bio <%= pair %> <% if logged_in? %>in<% end %>">
+    <h2><%=h bio.name %></h2>
+    <div class='bioPhoto'><%= image_tag (bio.photo) %><br /><%=h bio.caption %></div>
+    <p class='bioContent'><%=h bio.content %></p>
+	<div class='clear'></div>
+</div>
+
+
+<% end %>
+
+

@@ -1,0 +1,7 @@
+<div id="topNav"><h2>
+<%= link_to "Home",  {:controller=>"home", :action=>"index"} %>
+<%= link_to "Bios", bios_path %>
+<%= link_to "Events", events_path %>
+<%= link_to "Photos", photos_path %>
+<% if logged_in? %><span class="mode">You are in edit mode.</span><%=  link_to "Logout", logout_url, {:class => 'logout'} %><% end %>
+</h2></div>

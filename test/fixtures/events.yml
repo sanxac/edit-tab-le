@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  when: 2008-12-08
+  where: MyString
+  description: MyText
+  flyer: MyString
+
+two:
+  title: MyString
+  when: 2008-12-08
+  where: MyString
+  description: MyText
+  flyer: MyString

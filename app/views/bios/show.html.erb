@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @bio.name %>
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%=h @bio.photo %>
+</p>
+
+<p>
+  <b>Caption:</b>
+  <%=h @bio.caption %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @bio.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_bio_path(@bio) %> |
+<%= link_to 'Back', bios_path %>

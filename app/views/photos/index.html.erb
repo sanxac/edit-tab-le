@@ -1,0 +1,23 @@
+<h1>Band photos</h1>
+<% if logged_in? %><%= link_to 'New photo', new_photo_path, {:class => 'new'} %><% end %>
+<% for photo in @photos %>
+
+<!--<div>
+	<ul class="adminLinks">
+	    <li><%= link_to 'Show', photo %></li>
+	    <li><%= link_to 'Edit', edit_photo_path(photo) %></li>
+	    <li><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %></li>
+	</ul>-->
+
+	<div class="taped_photos_<%=cycle('odd','even')%>">
+		<a href="../images/p01/<%=h photo.url %>" rel="facebox">
+			<%= image_tag ('graphpaper_tape.png', {:class => 'tape'})%>
+			<img src="../images/p01/<%=h photo.thumb %>">
+			</a></div>
+<!--<%=h photo.caption %>
+</div>
+-->
+
+<% end %>
+
+

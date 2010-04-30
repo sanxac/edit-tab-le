@@ -1,0 +1,27 @@
+<h1>Upcoming Shows</h1>
+<% if logged_in? %><%= link_to 'New', new_event_path, {:class => 'new'} %><% end %>
+<% for event in @events %>
+<div>
+	
+<% pair = cycle("even","odd")%>
+
+<% if logged_in? %><ul class="adminLinks">
+
+    <li><%= link_to 'Edit', edit_event_path(event), {:class => pair}  %></li>
+    <li><%= link_to 'Delete', event, :confirm => 'Are you sure?', :method => :delete, :class => pair %></li>
+</ul><% end %>
+
+<div class="event <%= pair %> <% if logged_in? %>in<% end %>">
+    <h2><%=h event.title %></h2>
+    <h3><%=h event.where %> at <%=h event.when %></h3>
+    <p><%=h event.description %></p>
+<% if event.flyer != '' %>
+    <%= image_tag (event.flyer, {:class => 'fright'}) %>
+<% end %>
+
+	<div class='clear'></div>
+</div>
+</div>
+<% end %>
+
+

@@ -1,0 +1,122 @@
+body {
+	background-color:#666;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align:center;
+}
+
+#main {
+    background-color:#040204;
+	margin: -8px auto; /*changed 0 to -8 cancelling out what?*/
+  	width: 700px;
+	text-align: left;	
+	position: absolute;
+	left: 15%;
+	right: 20%;
+	padding-top: 20px;
+	background-image:url(../images/fill.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+}
+.content {border: 1px solid #333;margin-top: 25px; border-top: none;}
+
+a {text-decoration:none}
+h2 a {
+  padding: 10px 20px;
+  line-height: 2em;
+}
+h1 {
+  text-align: center;
+  color: #888;
+  border-bottom: 1px solid #B5B2B1;
+}
+
+.tape {
+height:36px;
+left:100px;
+position:absolute;
+top:-15px;
+width:117px;
+z-index:2;
+}
+img {
+border:medium none;
+}
+
+.taped_photos_odd {
+
+padding-left: 10px;
+width: 300px;
+position: relative;
+left: 10%;
+top: 50px;
+text-align: center;
+}
+.taped_photos_even {
+
+padding-right: 10px;
+width: 300px;
+position: relative;
+left: 53%;
+top: -130px;
+text-align:center;
+}
+.links {
+position: relative;
+left: 56%;
+top: -130px;
+text-align:left;
+}
+.links_photos {
+position: relative;
+left: 50%;
+top: -130px;
+text-align:left;
+}
+.topleft {position: relative;left: 50px;margin-right: 10px;}
+
+p {color: #b5b2b1; font-size: 1em;  font-family:Arial, Helvetica, sans-serif; width: 200px; margin: 50px;line-height: 1.2em}
+a.outline_link {
+	text-decoration: none;
+	opacity: .5;
+	filter: alpha(opacity=50);
+	zoom:1;
+}
+a.outline_link:hover {
+	opacity: .8;
+	filter: alpha(opacity=80);
+}
+.opaque {
+	opacity: .5;
+	filter: alpha(opacity=50);
+	zoom:1;
+}
+
+.clear{clear:both;}
+.fleft{float:left;}
+.fright{float:right;}
+
+#footer {text-align:center;padding-top:30px;}
+#topNav h2 {text-align:center;}
+
+.bio, .event { border-bottom: 1px solid #b5b2b1;padding:10px;}
+.in{margin-top: -100px;}
+.bio p, .event p {width:auto;}
+.bio p.bioContent {padding-left: 10px;border-left: 1px dotted #b5b2b1;margin-left:170px;}
+.bio .bioPhoto {float:left; padding:5px;}
+.even {background: #111; color:#999;}
+.odd {background: #000; color: #b5b2b1;}
+
+.adminLinks {position:relative;left:656px;top:-13px;}
+.adminLinks li {padding: 2px; list-style-type:none; margin: 20px 0;}
+.adminLinks li a, .new, .editable, .logout {border:1px dashed #bbb;padding:10px}
+.new {background: #111; margin-left: -49px; border-right: none;}
+.adminLinks li a.even {border-left: 1px solid #111;}
+.adminLinks li a.odd {border-left: 1px solid #000;}
+.editable {border-right: none; border-left:none;}
+.logout {position: absolute; top: 103px; left:699px;background: #111; border-left: none;}
+.mode {position: absolute; top: 77px; color: #fff; left: 444px; width: auto;
+  -webkit-transform: rotate(-3deg); 
+  -moz-transform: rotate(-3deg);
+  text-shadow: 1px -1px 2px #CDCDCD;
+  }
+.adminLinks li, .new {width: 200px;}

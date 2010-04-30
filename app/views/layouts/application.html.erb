@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title><%= controller.controller_name %>: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+<%= stylesheet_link_tag 'br' %>
+<%= stylesheet_link_tag 'facebox' %>
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag 'jquery' %>
+<%= javascript_include_tag 'facebox' %>
+<script type="text/javascript"> jQuery(document).ready(function($) {
+  $('a[rel*=facebox]').facebox()
+}) </script>
+</head>
+<body>
+
+<p style="color: white; float:left"><%= flash[:notice] %></p>
+<div id="main">
+<%= image_tag("br_1.png",  {:class => 'topleft'}) %>
+<%= image_tag("omr.png") %>
+<%= render :partial => 'layouts/header' %>
+<div class="content">
+<%= yield  %>
+<%= render :partial => 'layouts/footer' %>
+</div>
+
+</div>
+</body>
+</html>
